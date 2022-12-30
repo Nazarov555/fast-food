@@ -115,7 +115,7 @@
                 </div>
                 <h2>Кока-кола (маленькая)</h2>
                 <h3>Вкусная Еда</h3>
-                <span>230 рублей</span>
+                <span>200 рублей</span>
             </div>
 
             <div class="box">
@@ -124,7 +124,7 @@
                 </div>
                 <h2>Кока-кола (средняя)</h2>
                 <h3>Вкусная Еда</h3>
-                <span>230 рублей</span>
+                <span>250 рублей</span>
             </div>
 
             <div class="box">
@@ -133,7 +133,7 @@
                 </div>
                 <h2>Кока-кола (большая)</h2>
                 <h3>Вкусная Еда</h3>
-                <span>230 рублей</span>
+                <span>300 рублей</span>
             </div>
 
             <div class="box">
@@ -184,6 +184,36 @@
    <section class="call-to-action cta">
         <h2>Мы делаем качественную еду <br> каждый день</h2>
         <a href="#" class="button">Давайте поговорим</a>
+   </section>
+
+   <section class="accordion">
+
+        <div class="accordion_title">
+            <h1>Часто задаваемые вопросы</h1>
+        </div>
+
+        <div class="content-container">
+            <div class="question">Вкусная ли у нас еда?</div>
+            <div class="answer">
+                Конечно у нас очень вкусная еда по оценкам экспертов 9/10
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure molestias sunt dolorum vero minus, voluptatibus ab quia sed repellat accusantium alias vitae ipsum harum quam aliquam fuga facere aperiam.
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="question">Насколько у нас быстрая доставка?</div>
+            <div class="answer">
+                Очень быстрая доставка Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam saepe consectetur ex quis, illum dolorem omnis ab aspernatur? Eveniet omnis necessitatibus dolores blanditiis laborum reprehenderit vero veniam rerum dolor.
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="question">Как у нас заказать еду?</div>
+            <div class="answer">
+                У нас на сайте Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita deserunt voluptates nisi consectetur voluptas ullam nesciunt placeat repellat id rerum ut labore iste, ratione accusantium omnis natus at officia totam!
+            </div>
+        </div>
+
    </section>
 
    <footer id="contact">
@@ -238,6 +268,14 @@
             navbar.classList.remove("active");
         }
 
+        const accordion = document.getElementsByClassName('content-container');
+
+        for(let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle("active");
+            });
+        }
+        
     </script>
     
 </body>

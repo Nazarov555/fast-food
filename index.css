@@ -222,6 +222,51 @@ section {
     margin-bottom: 30px; 
 }
 
+.accordion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    margin: 50px;
+    border-radius: 20px;
+    padding: 1.5em;
+}
+.accordion .content-container .question {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    font-size: 2em;
+    top: -7px;
+    cursor: pointer;
+
+    border-bottom: 1px solid black;
+}
+.accordion .content-container .question::after {
+    content: '+';
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 2rem;
+}
+.accordion .content-container .answer {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    font-size: 1.5rem;
+}
+.accordion .content-container.active .answer {
+    height: 150px;
+    
+}
+.accordion .content-container.active .question::after{
+    content: '-';
+    font-size: 3rem;
+    top: -15px;
+}
+
+
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -329,7 +374,22 @@ section {
     section {
         padding: 100px 7%;
     }
+
+    .accordion .content-container .question {
+        font-size: 1rem;
+    }
+    .accordion .content-container .answer {
+        font-size: 1rem;
+    }
+    .accordion .content-container .question::after {
+        font-size: 1.5rem;
+    }
+    .accordion .content-container.active .question::after {
+        font-size: 1.5rem;
+        top: -6px;
+    }
 }
+
 
 @media (max-width: 575px) {
     .column {
